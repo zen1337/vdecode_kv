@@ -1,0 +1,33 @@
+#:kivy 2.0.0
+<CntossBoxLayout>:
+ orientation: 'vertical'
+ drag_reactangle: self.x, self.y, self.width, self.height
+ drag_timeout: 1000000
+ drag_distance: 0
+ FloatLayout:
+  CntossBoxLayout:
+   size_hint: 0.25, 0.2
+   text: 'drag me'
+ Label:
+  font_size: 50
+  text: 'Wtf its goint to be?'
+ BoxLayout:
+  orientation: 'vertical'
+  Button:
+   text: 'Heads'
+   on_release: root.choice('heads')
+  Button:
+   text: 'Tails'
+   on_release: root.choice('tails')
+ BoxLayout:
+  orientation: 'horizontal'
+  Button:
+   text: 'Heads'
+   on_release: root.choice('heads')
+  Button:
+   text: 'Tails'
+   on_release: root.choice('tails')
+ Label:
+  id: result
+  font_size: 40
+  text: ''

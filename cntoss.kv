@@ -1,0 +1,24 @@
+#:kivy 2.0.0
+<CntossBoxLayout>:
+ BoxLayout:
+  orientation: 'vertical'
+  Label:
+   font_size: self.height - 20
+   text_size: self.size
+   text: "ok just testing"
+   halign: 'center'
+   shorten: True
+   outline_color: 20, 30, 50, 60
+  Button:
+   text: 'Heads'
+   on_release: root.choice('heads')
+  Button:
+   text: 'Tails'
+   on_release: root.choice('tails')
+  Label:
+   orientation: 'horizontal'
+   id: result
+   text_size: self.size
+   font_size: self.height - 20
+   text: ''
+   halign: 'center'

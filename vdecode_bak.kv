@@ -1,0 +1,51 @@
+#:kivy 2.0
+<VdecodeBoxLayout>:
+ BoxLayout:
+  orientation: 'vertical'
+  Label:
+   size: self.texture_size
+   text: 'Welcome to vdecode v0.1'
+   text_size: self.width - 20, self.height - 20
+   font_size: self.height * 0.25
+   halign: "center"
+   valign: 'middle'
+  BoxLayout:
+   Button:
+    id: b1
+    text: 'Violation'
+    text_size: self.size
+    font_size: self.height *0.25
+    halign: 'center'
+    valign: 'middle'
+    on_release: root.choice('Violation')
+    on_release: root.buttonEnabled("b1")
+    background_color: 1,1,1,1
+   Button
+    id: b2
+    orientation: 'vertical'
+    text_size: self.size
+    font_size: self.height *0.25
+    text: 'Base64'
+    halign: 'center'
+    valign: 'middle'
+    on_release: root.choice('Base64')
+    on_release: root.buttonEnabled("b2")
+    background_color: 1,1,1,1
+   Button:
+    id: b3
+    text_size: self.size
+    font_size: self.height *0.25
+    text: 'KMS'
+    halign: 'center'
+    valign: 'middle'
+    on_release: root.choice('KMS')
+    on_release: root.buttonEnabled("b3")
+    background_color: 1,1,1,1
+  BoxLayout:
+   Label:
+    id: func
+    text: ''
+    text_size: self.size
+    font_size: self.height * 0.25
+    halign: "center"
+    valign: 'middle'

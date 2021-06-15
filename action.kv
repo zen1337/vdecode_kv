@@ -1,0 +1,32 @@
+#:kivy 2.0
+<ActionBoxLayout>:
+    ActionBar:
+        pos_hint: {'top':1}
+        ActionView:
+            use_separator: True
+            ActionPrevious:
+                title: 'Action Bar'
+                with_previous: False
+            ActionOverflow:
+            ActionButton:
+                text: 'Btn0'
+                icon: 'atlas://data/images/defaulttheme/audio-volume-high'
+            ActionButton:
+                text: 'Btn1'
+            ActionButton:
+                text: 'Btn2'
+            ActionGroup:
+                text: 'Group 1'
+                ActionButton:
+                    text: 'Btn3'
+                ActionButton:
+                    text: 'Btn4'
+            ActionGroup:
+                dropdown_width: 200
+                text: 'Group 2'
+                ActionButton:
+                    text: 'Btn5'
+                ActionButton:
+                    text: 'Btn6'
+                ActionButton:
+                    text: 'Btn7'

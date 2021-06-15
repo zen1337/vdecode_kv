@@ -1,0 +1,81 @@
+#:kivy 2.0
+<VdecodeBoxLayout>:
+    BoxLayout:
+        orientation: 'vertical'
+        ActionBar:
+            pos_hint: {'top':1}
+            ActionView:
+                use_separator: True
+                ActionPrevious:
+                    title: 'Menu'
+                    with_previous: False
+                ActionOverflow:
+                ActionButton:
+                    text: 'Btn0'
+                    icon: 'atlas://data/images/defaulttheme/audio-volume-high'
+                ActionButton:
+                    text: 'Btn1'
+                ActionButton:
+                    text: 'Btn2'
+                ActionGroup:
+                    text: 'Group 1'
+                    ActionButton:
+                        text: 'Btn3'
+                    ActionButton:
+                        text: 'Btn4'
+                ActionGroup:
+                    dropdown_width: 200
+                    text: 'Group 2'
+                    ActionButton:
+                        text: 'Btn5'
+                    ActionButton:
+                        text: 'Btn6'
+                    ActionButton:
+                        text: 'Btn7'
+        Label:
+            size: self.texture_size
+            text: 'Welcome to vdecode v0.1'
+            text_size: self.width - 20, self.height - 20
+            font_size: self.height * 0.25
+            halign: "center"
+            valign: 'middle'
+        BoxLayout:
+            Button:
+                id: b1
+                text: 'Violation'
+                text_size: self.size
+                font_size: self.height *0.25
+                halign: 'center'
+                valign: 'middle'
+                on_release: root.choice('Violation')
+                on_release: root.buttonEnabled("b1")
+                background_color: 1,1,1,1
+            Button:
+                id: b2
+                orientation: 'vertical'
+                text_size: self.size
+                font_size: self.height *0.25
+                text: 'Base64'
+                halign: 'center'
+                valign: 'middle'
+                on_release: root.choice('Base64')
+                on_release: root.buttonEnabled("b2")
+                background_color: 1,1,1,1
+            Button:
+                id: b3
+                text_size: self.size
+                font_size: self.height *0.25
+                text: 'KMS'
+                halign: 'center'
+                valign: 'middle'
+                on_release: root.choice('KMS')
+                on_release: root.buttonEnabled("b3")
+                background_color: 1,1,1,1
+        BoxLayout:
+            Label:
+                id: func
+                text: ''
+                text_size: self.size
+                font_size: self.height * 0.25
+                halign: "center"
+                valign: 'middle'
